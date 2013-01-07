@@ -16,10 +16,10 @@
 //#define NX      256
 //#define BATCH   4
 #define MIN_NX      256
-#define MAX_NX      32768
+#define MAX_NX      16777216
 #define MIN_BATCH   1
 #define MAX_BATCH   4096
-#define MAX_DIM     32768*4096
+#define MAX_DIM     16777216*4
 //#define MAX_DIM     16777216
 
 
@@ -82,10 +82,10 @@ int main ()
     for(nx=MIN_NX; nx<=MAX_NX; nx=nx*2)
     //for(nx=4096; nx<=MAX_NX; nx+=4096)
     {
-        fprintf(stderr, "Pts\tbatch\ttotal time\ttotal time 2\tsum piecewise\tcopy to gpu\tfft on gpu\tcopy from gpu\tperformance per point\ttimes reported in ms\n");
+        fprintf(stderr, "Pts\tbatch\ttotal time\ttotal time 2\tsum piecewise\tcopy to gpu\tfft on gpu\tcopy from gpu\ttimes reported in ms\n");
         for(batch=MIN_BATCH;batch<=MAX_BATCH;batch=batch*2)
         {
-            if(sizeof(cufftComplex)*nx*batch*2 <= totalGlobalMem/2 && nx*batch<MAX_DIM)
+            if(/*sizeof(cufftComplex)*nx*batch*2 <= totalGlobalMem/2 &&*/ nx*batch<MAX_DIM)
             {  
                 //fprintf(stderr, "Allocating %lld bytes\n", sizeof(cufftComplex)*nx*batch*2);
                 // allocate device memory for the fft
@@ -158,12 +158,12 @@ int main ()
                 cudaThreadSynchronize();
             
                 
-                fprintf(stderr, "%lld\t%lld\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n",
+                fprintf(stderr, "%lld\t%lld\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%d\n",
                     nx, batch, 
                     sdkGetTimerValue(&complete_fft_timer), sdkGetTimerValue(&complete_fft_timer2), sdkGetTimerValue(&piecewise_fft_timer), 
                     sdkGetTimerValue(&copy_to_gpu_timer), 
                     sdkGetTimerValue(&fft_only_timer), sdkGetTimerValue(&copy_from_gpu_timer),
-                    sdkGetTimerValue(&complete_fft_timer)/(nx*batch));
+                    /*sdkGetTimerValue(&complete_fft_timer)/(nx*batch),*/ sizeof(cufftComplex)*nx*batch);
             }
         }
     }
