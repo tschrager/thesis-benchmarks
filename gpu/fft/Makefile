@@ -6,11 +6,13 @@ CFLAGS = -g -O2
 CUDA_INCLUDE_HEADER = -I/usr/local/cuda/include -I$(NVIDIA_SDK_DIR)/common/inc 
 CUDA_INCLUDE_LIB = -L/usr/local/cuda/lib64 -L$(NVIDIA_SDK_DIR)/commonlib/linux/x86_64 -lcufft -lcuda 
 
-TARGETS = cuffttest
+TARGETS = cuffttestc2c cuffttestr2c
 LIB_TARGETS = cuda_fft_library.a
-.PHONY: clean
+.PHONY: clean all
 
-default: cuffttest
+default: cuffttestr2c
+
+all: $(TARGETS)
 
 %.o: %.cu Makefile
 	$(CC) $(CFLAGS) $(CUDA_INCLUDE_HEADER) $(DEBUG) -c $<
