@@ -22,6 +22,8 @@
 #define MAX_DIM     16777216*4
 //#define MAX_DIM     16777216
 
+#define AVERAGED_ITERATIONS 100
+
 
 static cufftHandle plan;
 cufftComplex *gpudata;
@@ -82,7 +84,7 @@ int main ()
     for(nx=MIN_NX; nx<=MAX_NX; nx=nx*2)
     //for(nx=4096; nx<=MAX_NX; nx+=4096)
     {
-        fprintf(stderr, "Pts\tbatch\ttotal time\ttotal time 2\tsum piecewise\tcopy to gpu\tfft on gpu\tcopy from gpu\ttimes reported in ms\n");
+        fprintf(stderr, "Pts\tbatch\ttotal time\ttotal time 100x\tsum piecewise\tcopy to gpu\tfft on gpu\tcopy from gpu\ttimes reported in ms\n");
         for(batch=MIN_BATCH;batch<=MAX_BATCH;batch=batch*2)
         {
             if(/*sizeof(cufftComplex)*nx*batch*2 <= totalGlobalMem/2 &&*/ nx*batch<MAX_DIM)
@@ -95,37 +97,38 @@ int main ()
                 cufftPlan1d(&plan,nx,CUFFT_C2C, batch);
                 cudaThreadSynchronize();
                 
-                
-                // run the fft
-                // allocate device memory and copy over data
-                cudaMemcpy(gpudata, data, sizeof(cufftComplex)*nx*batch, cudaMemcpyHostToDevice);
-                cudaThreadSynchronize();
-                // run the fft
                 sdkResetTimer(&complete_fft_timer);
                 sdkStartTimer(&complete_fft_timer);
-                cufftExecC2C(plan,gpudata,fftgpudata,CUFFT_FORWARD);
-                cudaThreadSynchronize();
-                sdkStopTimer(&complete_fft_timer);
-                // copy the result back
-                cudaMemcpy(result, fftgpudata, sizeof(cufftComplex)*nx*batch, cudaMemcpyDeviceToHost);
-                cudaThreadSynchronize();
-                
-                
-                
-                
                 // run the fft
                 // allocate device memory and copy over data
                 cudaMemcpy(gpudata, data, sizeof(cufftComplex)*nx*batch, cudaMemcpyHostToDevice);
                 cudaThreadSynchronize();
                 // run the fft
-                sdkResetTimer(&complete_fft_timer2);
-                sdkStartTimer(&complete_fft_timer2);
                 cufftExecC2C(plan,gpudata,fftgpudata,CUFFT_FORWARD);
                 cudaThreadSynchronize();
-                sdkStopTimer(&complete_fft_timer2);
                 // copy the result back
                 cudaMemcpy(result, fftgpudata, sizeof(cufftComplex)*nx*batch, cudaMemcpyDeviceToHost);
                 cudaThreadSynchronize();
+                sdkStopTimer(&complete_fft_timer);
+                
+                
+                
+                sdkResetTimer(&complete_fft_timer2);
+                sdkStartTimer(&complete_fft_timer2);
+                for(int fftiter=0;fftiter<AVERAGED_ITERATIONS;fftiter++)
+                {
+                    // run the fft
+                    // allocate device memory and copy over data
+                    //cudaMemcpy(gpudata, data, sizeof(cufftComplex)*nx*batch, cudaMemcpyHostToDevice);
+                    cudaThreadSynchronize();
+                    // run the fft
+                    cufftExecC2C(plan,gpudata,fftgpudata,CUFFT_FORWARD);
+                    //cudaThreadSynchronize();
+                    // copy the result back
+                    cudaMemcpy(result, fftgpudata, sizeof(cufftComplex)*nx*batch, cudaMemcpyDeviceToHost);
+                }
+                cudaThreadSynchronize();
+                sdkStopTimer(&complete_fft_timer2);
                 
                 
                 
@@ -160,7 +163,7 @@ int main ()
                 
                 fprintf(stderr, "%lld\t%lld\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%d\n",
                     nx, batch, 
-                    sdkGetTimerValue(&complete_fft_timer), sdkGetTimerValue(&complete_fft_timer2), sdkGetTimerValue(&piecewise_fft_timer), 
+                    sdkGetTimerValue(&complete_fft_timer), sdkGetTimerValue(&complete_fft_timer2)/AVERAGED_ITERATIONS, sdkGetTimerValue(&piecewise_fft_timer), 
                     sdkGetTimerValue(&copy_to_gpu_timer), 
                     sdkGetTimerValue(&fft_only_timer), sdkGetTimerValue(&copy_from_gpu_timer),
                     /*sdkGetTimerValue(&complete_fft_timer)/(nx*batch),*/ sizeof(cufftComplex)*nx*batch);
