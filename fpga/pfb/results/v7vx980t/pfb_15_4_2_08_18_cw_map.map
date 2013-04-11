@@ -1,0 +1,632 @@
+Release 14.2 Map P.28xd (lin64)
+Xilinx Map Application Log File for Design 'pfb_15_4_2_08_18_cw'
+
+Design Information
+------------------
+Command Line   : map -o pfb_15_4_2_08_18_cw_map.ncd -intstyle xflow -detail -ol
+high pfb_15_4_2_08_18_cw.ngd pfb_15_4_2_08_18_cw.pcf 
+Target Device  : xc7vx980t
+Target Package : ffg1930
+Target Speed   : -1
+Mapper Version : virtex7 -- $Revision: 1.55 $
+Mapped Date    : Fri Apr  5 15:21:49 2013
+
+WARNING:LIT:701 - PAD symbol "clk" has an undefined IOSTANDARD.
+WARNING:LIT:701 - PAD symbol "gateway_in1(31)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(31)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(30)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(30)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(29)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(29)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(28)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(28)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(27)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(27)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(26)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(26)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(25)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(25)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(24)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(24)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(23)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(23)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(22)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(22)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(21)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(21)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(20)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(20)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(19)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(19)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(18)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(18)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(17)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(17)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(16)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(16)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(15)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(15)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(14)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(14)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(13)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(13)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(12)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(12)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(11)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(11)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(10)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(10)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(9)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(9)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(8)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(8)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(7)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(7)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(6)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(6)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(5)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(5)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(4)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(4)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(3)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(3)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(2)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(2)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(1)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(1)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in1(0)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in1(0)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(31)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(31)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(30)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(30)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(29)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(29)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(28)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(28)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(27)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(27)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(26)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(26)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(25)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(25)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(24)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(24)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(23)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(23)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(22)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(22)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(21)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(21)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(20)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(20)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(19)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(19)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(18)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(18)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(17)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(17)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(16)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(16)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(15)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(15)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(14)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(14)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(13)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(13)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(12)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(12)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(11)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(11)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(10)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(10)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(9)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(9)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(8)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(8)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(7)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(7)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(6)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(6)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(5)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(5)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(4)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(4)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(3)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(3)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(2)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(2)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(1)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(1)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in2(0)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in2(0)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(31)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(31)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(30)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(30)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(29)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(29)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(28)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(28)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(27)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(27)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(26)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(26)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(25)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(25)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(24)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(24)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(23)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(23)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(22)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(22)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(21)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(21)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(20)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(20)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(19)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(19)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(18)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(18)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(17)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(17)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(16)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(16)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(15)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(15)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(14)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(14)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(13)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(13)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(12)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(12)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(11)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(11)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(10)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(10)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(9)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(9)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(8)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(8)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(7)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(7)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(6)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(6)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(5)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(5)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(4)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(4)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(3)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(3)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(2)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(2)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(1)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(1)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in3(0)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in3(0)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(31)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(31)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(30)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(30)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(29)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(29)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(28)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(28)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(27)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(27)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(26)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(26)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(25)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(25)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(24)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(24)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(23)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(23)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(22)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(22)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(21)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(21)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(20)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(20)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(19)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(19)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(18)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(18)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(17)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(17)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(16)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(16)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(15)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(15)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(14)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(14)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(13)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(13)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(12)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(12)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(11)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(11)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(10)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(10)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(9)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(9)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(8)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(8)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(7)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(7)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(6)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(6)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(5)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(5)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(4)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(4)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(3)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(3)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(2)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(2)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(1)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(1)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in5(0)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in5(0)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_in" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_in" is not constrained (LOC) to a specific
+   location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(17)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(17)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(16)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(16)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(15)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(15)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(14)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(14)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(13)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(13)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(12)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(12)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(11)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(11)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(10)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(10)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(9)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(9)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(8)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(8)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(7)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(7)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(6)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(6)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(5)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(5)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(4)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(4)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(3)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(3)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(2)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(2)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(1)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(1)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out1(0)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out1(0)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(17)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(17)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(16)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(16)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(15)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(15)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(14)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(14)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(13)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(13)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(12)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(12)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(11)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(11)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(10)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(10)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(9)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(9)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(8)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(8)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(7)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(7)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(6)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(6)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(5)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(5)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(4)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(4)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(3)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(3)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(2)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(2)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(1)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(1)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out2(0)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out2(0)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(17)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(17)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(16)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(16)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(15)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(15)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(14)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(14)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(13)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(13)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(12)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(12)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(11)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(11)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(10)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(10)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(9)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(9)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(8)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(8)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(7)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(7)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(6)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(6)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(5)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(5)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(4)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(4)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(3)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(3)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(2)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(2)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(1)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(1)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out3(0)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out3(0)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(17)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(17)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(16)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(16)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(15)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(15)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(14)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(14)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(13)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(13)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(12)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(12)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(11)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(11)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(10)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(10)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(9)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(9)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(8)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(8)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(7)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(7)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(6)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(6)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(5)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(5)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(4)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(4)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(3)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(3)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(2)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(2)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(1)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(1)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out4(0)" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out4(0)" is not constrained (LOC) to a
+   specific location.
+WARNING:LIT:701 - PAD symbol "gateway_out" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "gateway_out" is not constrained (LOC) to a
+   specific location.
+Mapping design into LUTs...
+ERROR:MapLib:30 - LOC constraint D7HACK on clk is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+
+Error found in mapping process, exiting...
+Errors found during the mapping phase.  Please see map report file for more
+details.  Output files will not be written.
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings : 405
