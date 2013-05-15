@@ -1,5 +1,6 @@
 #include <cuda.h>
 #include <stdio.h>
+#include <helper_timer.h>
 
 #define NUM_TAPS            8       /* number of multiples of g_iNFFT */
 
@@ -7,12 +8,18 @@
 //int g_iNFFT = DEF_LEN_SPEC;
 dim3 g_dimBPFB(1, 1, 1);
 dim3 g_dimGPFB(1, 1);
-#define DEF_LEN_SPEC        1024        /* default value for g_iNFFT */
-int g_iNFFT = DEF_LEN_SPEC;
+#define MIN_NX        256        /* default value for g_iNFFT */
+#define MAX_NX        16777216        /* default value for g_iNFFT */
+//int g_iNFFT = DEF_LEN_SPEC;
 
 /* what does this mean? */
-#define DEF_NUM_SUBBANDS    8
-int g_iNumSubBands = DEF_NUM_SUBBANDS;
+#define MIN_BATCH   1
+#define MAX_BATCH   8
+//int g_iNumSubBands = BATCH_SIZE;
+
+#define MAX_DIM 16777216*4
+
+#define AVERAGED_ITERATIONS 100
 
 #define DEF_SIZE_READ       33554432    /* 32 MB - block size in VEGAS input
                                            buffer */
@@ -52,20 +59,26 @@ __global__ void DoPFB(char4 *pc4Data,
 
 int main()
 {
+    long long nx;
+    long long batch;
     cudaDeviceProp stDevProp = {0};
     cudaGetDeviceProperties(&stDevProp, 0);
     int g_iMaxThreadsPerBlock = stDevProp.maxThreadsPerBlock;
+    
+    StopWatchInterface * complete_pfb_timer;
+    StopWatchInterface * piecewise_pfb_timer;
+    StopWatchInterface * copy_to_gpu_timer;
+    StopWatchInterface * pfb_only_timer;
+    StopWatchInterface * copy_from_gpu_timer;
+    
+    sdkCreateTimer(&complete_pfb_timer);
+    sdkCreateTimer(&piecewise_pfb_timer);
+    sdkCreateTimer(&copy_to_gpu_timer);
+    sdkCreateTimer(&pfb_only_timer);
+    sdkCreateTimer(&copy_from_gpu_timer);
+    
     //fprintf(stderr,"Threads %d", g_iMaxThreadsPerBlock);
     
-    /* allocate input data */
-    char4* g_pc4DataRead_d = NULL;          /* raw data read pointer */
-    char4* g_pc4Data_d = NULL;              /* raw data starting address */
-    cudaMalloc((void **) &g_pc4Data_d, g_iSizeRead);
-    g_pc4DataRead_d = g_pc4Data_d;
-    
-    /* allocate output data */
-    float4* g_pf4FFTIn_d = NULL;
-    cudaMalloc((void **) &g_pf4FFTIn_d, g_iNumSubBands * g_iNFFT * sizeof(float4));
     
     // 
     // g_pc4InBuf = (char4*) malloc(g_iSizeFile);
@@ -74,36 +87,90 @@ int main()
     //                              g_iSizeRead,
     //                              cudaMemcpyHostToDevice));
     
-    
+    // copy coefficients
     float *g_pfPFBCoeff = NULL;
-    g_pfPFBCoeff = (float *) malloc(g_iNumSubBands
+    g_pfPFBCoeff = (float *) malloc(MAX_BATCH
                                     * g_iNTaps
-                                    * g_iNFFT
+                                    * MAX_NX
                                     * sizeof(float));
     
     float *g_pfPFBCoeff_d = NULL;
-    cudaMalloc((void **) &g_pfPFBCoeff_d, g_iNumSubBands * g_iNTaps * g_iNFFT * sizeof(float));
+    cudaMalloc((void **) &g_pfPFBCoeff_d, MAX_BATCH * g_iNTaps * MAX_NX * sizeof(float));
     cudaMemcpy(g_pfPFBCoeff_d,
                g_pfPFBCoeff,
-               g_iNumSubBands * g_iNTaps * g_iNFFT * sizeof(float),
+               MAX_BATCH * g_iNTaps * MAX_NX * sizeof(float),
                cudaMemcpyHostToDevice);
+               
+    /* allocate input data */
+    char4* g_pc4DataRead_d = NULL;          /* raw data read pointer */
+    char4* g_pc4Data_d = NULL;              /* raw data starting address */
+    cudaMalloc((void **) &g_pc4Data_d, g_iSizeRead);
+    g_pc4DataRead_d = g_pc4Data_d;
+    
+    /* allocate output data */
+    float4* g_pf4FFTIn_d = NULL;
+    cudaMalloc((void **) &g_pf4FFTIn_d, MAX_BATCH * MAX_NX * sizeof(float4));
     
     
-    g_dimGPFB.x = (g_iNumSubBands * g_iNFFT) / g_iMaxThreadsPerBlock;
-    
-    if (g_iNFFT < g_iMaxThreadsPerBlock)
+    for(nx=MIN_NX; nx<=MAX_NX; nx=nx*2)
+    //for(nx=MAX_NX; nx>=MIN_NX; nx=nx/2)
     {
-        g_dimBPFB.x = g_iNFFT;
-    }
-    else
-    {
-        g_dimBPFB.x = g_iMaxThreadsPerBlock;
+        fprintf(stderr, "Pts\tbatch\ttotal time x\tsum piecewise x\tcopy to gpu x\tpfb on gpu x\tcopy from gpu x\tdata size\n");
+        for(batch=MIN_BATCH;batch<=MAX_BATCH;batch=batch*2)
+        //for(batch=MAX_BATCH;batch>=MIN_BATCH;batch=batch/2)
+        {
+            
+            if(/*sizeof(cufftComplex)*nx*batch*2 <= totalGlobalMem/2 &&*/ nx*batch<MAX_DIM)
+            {
+                g_dimGPFB.x = (batch * nx) / g_iMaxThreadsPerBlock;
+
+                if (nx < g_iMaxThreadsPerBlock)
+                {
+                    g_dimBPFB.x = nx;
+                }
+                else
+                {
+                    g_dimBPFB.x = g_iMaxThreadsPerBlock;
+                }
+
+                sdkResetTimer(&complete_pfb_timer);
+                sdkStartTimer(&complete_pfb_timer);
+                for(int pfbiter=0;pfbiter<AVERAGED_ITERATIONS;pfbiter++)
+                {
+                    DoPFB<<<g_dimGPFB, g_dimBPFB>>>(g_pc4DataRead_d,
+                                                    g_pf4FFTIn_d,
+                                                    g_pfPFBCoeff_d);
+                }
+                cudaThreadSynchronize();
+                sdkStopTimer(&complete_pfb_timer);
+                
+                sdkResetTimer(&piecewise_pfb_timer);
+                sdkResetTimer(&pfb_only_timer);
+                
+                sdkStartTimer(&piecewise_pfb_timer);
+                for(int pfbiter=0;pfbiter<AVERAGED_ITERATIONS;pfbiter++)
+                {
+                    sdkStartTimer(&pfb_only_timer);
+                    DoPFB<<<g_dimGPFB, g_dimBPFB>>>(g_pc4DataRead_d,
+                                                    g_pf4FFTIn_d,
+                                                    g_pfPFBCoeff_d);
+                    cudaThreadSynchronize();
+                    sdkStopTimer(&pfb_only_timer);                                                        
+                }
+                cudaThreadSynchronize();
+                sdkStopTimer(&piecewise_pfb_timer);
+                
+                fprintf(stderr, "%lld\t%lld\t%f\t%f\t%f\t%f\t%f\t%d\n",
+                    nx, batch, 
+                    sdkGetTimerValue(&complete_pfb_timer), sdkGetTimerValue(&piecewise_pfb_timer), 
+                    sdkGetTimerValue(&copy_to_gpu_timer), 
+                    sdkGetTimerValue(&pfb_only_timer), sdkGetTimerValue(&copy_from_gpu_timer), 
+                    (sizeof(float4)*nx*batch));
+            } 
+        }
     }
     
-    DoPFB<<<g_dimGPFB, g_dimBPFB>>>(g_pc4DataRead_d,
-                                    g_pf4FFTIn_d,
-                                    g_pfPFBCoeff_d);
-    g_pc4DataRead_d += (g_iNumSubBands * g_iNFFT);
+                                    
     
     (void) cudaFree(g_pc4Data_d);
     

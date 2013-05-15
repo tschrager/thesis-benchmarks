@@ -70,10 +70,11 @@ int main ()
     
     //fprintf(stderr, "Initializing data... ");
     // generate some random data
+    srand(0);
     for(i=0; i<MAX_DIM; i++)
     {
-        data[i].x=1.0f;
-        data[i].y=1.0f;
+        data[i].x=(float)rand() / (float)RAND_MAX;
+        data[i].y=(float)rand() / (float)RAND_MAX;
     }
     //fprintf(stderr, "done\n");
 
