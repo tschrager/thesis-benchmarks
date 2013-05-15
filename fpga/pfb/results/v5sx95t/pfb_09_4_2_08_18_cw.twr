@@ -1,0 +1,74 @@
+--------------------------------------------------------------------------------
+Release 13.3 Trace  (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+/tools/commercial/xilinx/13.3/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3
+-intstyle xflow -xml pfb_09_4_2_08_18_cw.twx pfb_09_4_2_08_18_cw.ncd
+pfb_09_4_2_08_18_cw.pcf
+
+Design file:              pfb_09_4_2_08_18_cw.ncd
+Physical constraint file: pfb_09_4_2_08_18_cw.pcf
+Device,package,speed:     xc5vsx95t,ff1136,-1 (PRODUCTION 1.73 2011-10-03, STEPPING level 0)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk_c30bfd7c = PERIOD TIMEGRP "clk_c30bfd7c" 5 ns HIGH 
+50%;
+
+ 15510 paths analyzed, 6109 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.639ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.639|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 15510 paths, 0 nets, and 5324 connections
+
+Design statistics:
+   Minimum period:   4.639ns   (Maximum frequency: 215.564MHz)
+
+
+Analysis completed Thu Mar 28 16:29:36 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 646 MB
+
+
+
