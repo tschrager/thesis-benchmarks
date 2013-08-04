@@ -1,6 +1,6 @@
 import subprocess
 
-iterations = "1x"
+iterations = "100x"
 gpu = "gtx580"
 #gpu = "test"
 
