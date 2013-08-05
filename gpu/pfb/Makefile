@@ -1,10 +1,11 @@
 CC = nvcc
+NVIDIA_INSTALL_DIR = /opt/local/cuda-5.0/
 NVIDIA_SDK_DIR = /opt/local/cuda-5.0/samples
 CUTIL_LIB_NAME = cutil_x86_64
 CFLAGS = -g -O2
 #DEBUG = -D DEBUG
-CUDA_INCLUDE_HEADER = -I/usr/local/cuda/include -I$(NVIDIA_SDK_DIR)/common/inc 
-CUDA_INCLUDE_LIB = -L/usr/local/cuda/lib64 -L$(NVIDIA_SDK_DIR)/commonlib/linux/x86_64 -lcufft -lcuda 
+CUDA_INCLUDE_HEADER = -I$(NVIDIA_INSTALL_DIR)/include -I$(NVIDIA_SDK_DIR)/common/inc 
+CUDA_INCLUDE_LIB = -L$(NVIDIA_INSTALL_DIR)/lib64 -L$(NVIDIA_SDK_DIR)/commonlib/linux/x86_64 -lcufft -lcuda 
 
 TARGETS = pfbtest
 .PHONY: clean all
