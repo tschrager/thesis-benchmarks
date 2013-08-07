@@ -1,0 +1,5 @@
+dim1	dim2	slices	ffs	brams	luts	dsps
+5	5	167	227	2	301	0
+12	5	187	248	2	335	0
+12	7	496	395	3	941	0	
+12	12	seg fault

@@ -1,0 +1,3 @@
+size	slices	ffs	drams	luts	dsps
+5	824	828	19	1221	0
+10	824	828	19	1221	0
